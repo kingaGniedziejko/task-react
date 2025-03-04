@@ -10,6 +10,7 @@ import styles from './UserForm.module.css';
 import { IUserFormData } from '../../types/IUserFormData.interface';
 import { Dayjs } from 'dayjs';
 import { sendApplication } from '../../actions/sendApplication';
+import { IFormState } from '../../types/FormState.type';
 
 const UserForm: React.FC = () => {
 	const [formData, setFormData] = React.useState<IUserFormData>({
@@ -35,11 +36,10 @@ const UserForm: React.FC = () => {
 		[formData]
 	);
 
-	const [state, formAction, isPending] = React.useActionState<any>(
-		//@ts-ignore
-		sendApplication.bind(null, formData),
-		{}
-	);
+	const [state, formAction, isPending] = React.useActionState<
+		Partial<IFormState<IUserFormData>>,
+		FormData
+	>(sendApplication.bind(null, formData), {});
 
 	React.useEffect(() => {
 		if (!isPending && Object.keys(state).length === 0 && state.constructor === Object) {

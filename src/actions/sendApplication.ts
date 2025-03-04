@@ -1,5 +1,6 @@
 'use server';
 
+import { IFormState } from '../types/FormState.type';
 import { IUserFormData } from '../types/IUserFormData.interface';
 import { readFile } from '../utils/readFile';
 import { validateEmail } from '../utils/validateEmail';
@@ -8,7 +9,7 @@ const APPLICATION_API_URL = 'http://letsworkout.pl/submit';
 
 export async function sendApplication(
 	formDataFull: IUserFormData,
-	_previousState: any,
+	_previousState: Partial<IFormState<IUserFormData>>,
 	formData: FormData
 ) {
 	// Validation
