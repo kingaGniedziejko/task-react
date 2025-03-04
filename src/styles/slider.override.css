@@ -1,0 +1,35 @@
+.MuiSlider-root {
+	color: var(--primary) !important;
+
+	.MuiSlider-rail {
+		opacity: 0.25;
+	}
+
+	.MuiSlider-thumb {
+		width: 16px;
+		height: 16px;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+
+	.MuiSlider-valueLabel {
+		background-color: var(--primary-lighter);
+		color: var(--primary);
+		font-weight: 400;
+		border: 1px solid var(--primary-light);
+
+		&.MuiSlider-valueLabelOpen {
+			transform: translateY(120%) scale(1);
+		}
+
+		&::before {
+			transform: translate(-50%, -50%) rotate(45deg);
+			top: 0;
+			bottom: unset;
+			border-top: 1px solid var(--primary-light);
+			border-left: 1px solid var(--primary-light);
+		}
+	}
+}

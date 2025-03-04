@@ -1,0 +1,12 @@
+.timeSlotItem {
+	min-width: 76px;
+	height: 46px;
+	border-radius: 8px;
+	border: 1px solid var(--primary-light);
+	background: var(--text-light);
+	cursor: pointer;
+}
+
+.timeSlotItemActive {
+	border: 2px solid var(--primary);
+}

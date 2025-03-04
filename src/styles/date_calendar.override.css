@@ -1,0 +1,29 @@
+.MuiDateCalendar-root {
+	* {
+		font-family: var(--font-family) !important;
+	}
+
+	span,
+	[role='gridcell'] {
+		font-size: 1rem !important;
+		color: var(--text);
+	}
+
+	.MuiPickersCalendarHeader-root {
+		.MuiIconButton-root {
+			color: var(--primary-light);
+		}
+	}
+	.MuiDayCalendar-weekDayLabel {
+		font-size: 0.9rem !important;
+		font-weight: 500;
+	}
+	.MuiPickersDay-root.Mui-selected {
+		background-color: var(--primary);
+
+		&:hover,
+		&:focus {
+			background-color: var(--primary);
+		}
+	}
+}

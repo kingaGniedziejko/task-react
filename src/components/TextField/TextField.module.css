@@ -1,0 +1,18 @@
+.input {
+	height: 48px;
+	padding: 0 1rem;
+	font-weight: 500;
+	border-radius: 8px;
+	border: 1px solid var(--primary-light);
+	background: var(--text-light);
+
+	&:focus {
+		border: 2px solid var(--primary);
+		background: var(--primary-lighter);
+	}
+}
+
+.error {
+	border: 2px solid var(--error);
+	background: var(--error-light);
+}

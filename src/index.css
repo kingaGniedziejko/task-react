@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url(./styles/date_calendar.override.css);
+@import url(./styles/slider.override.css);
+
+:root {
+	--background: #f0eaf8;
+	--text: #000853;
+	--text-light: #ffffff;
+	--text-secondary: #898da9;
+	--primary-dark: #6a19cd;
+	--primary: #761be4;
+	--primary-light: #cbb6e5;
+	--primary-lighter: #faf9fa;
+	--error: #ed4545;
+	--error-light: #feecec;
+	--font-family: 'Inter', sans-serif;
+}
+
+@theme {
+	--color-primary: var(--primary);
+	--color-primary-light: var(--primary-light);
+	--color-error: var(--error);
+}
+
+body {
+	font-family: var(--font-family);
+	box-sizing: border-box;
+	background-color: var(--background);
+	color: var(--text);
+}

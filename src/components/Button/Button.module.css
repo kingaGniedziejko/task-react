@@ -1,0 +1,21 @@
+.customButton {
+	height: 45px;
+	border-radius: 4px;
+	background: var(--primary);
+	color: var(--text-light);
+	font-weight: 500;
+	cursor: pointer;
+
+	&:hover {
+		background: var(--primary-dark);
+	}
+}
+
+.disabled {
+	background: var(--primary-light);
+	cursor: default;
+
+	&:hover {
+		background: var(--primary-light);
+	}
+}
