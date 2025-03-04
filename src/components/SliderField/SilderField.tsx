@@ -25,7 +25,7 @@ const SliderField: React.FC<SliderFieldProps> = ({ name, label, value, onChange 
 						max={100}
 						valueLabelDisplay="on"
 						value={value}
-						onChange={(e, value) => {
+						onChange={(_e, value) => {
 							onChange(value as number);
 						}}
 					/>
