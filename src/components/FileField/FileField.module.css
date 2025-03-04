@@ -18,14 +18,13 @@
 	border: 1px solid var(--primary-light);
 	background: var(--text-light);
 
-	span {
-		color: var(--text-secondary);
-	}
-
 	&:focus {
 		border: 2px solid var(--primary);
 		background: var(--primary-lighter);
 	}
+}
+.inputPlaceholderSecondary {
+	color: var(--text-secondary);
 }
 
 .deleteIcon {
@@ -34,4 +33,10 @@
 	&:hover {
 		color: var(--error);
 	}
+}
+
+.fileName {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }

@@ -36,21 +36,23 @@ const FileField: React.FC<FileFieldProps> = ({ name, label, value, onChange, err
 					accept="image/png, image/jpeg"
 					onChange={onFileChange}
 				/>
-				<div className={`${styles.inputOverride} flex justify-center items-center px-4`}>
+				<div className={`${styles.inputOverride} flex justify-center items-center px-5`}>
 					{value ? (
-						<p>
-							{value.name}
+						<div className="flex flex-row justify-center w-[100%]">
+							<span className={styles.fileName}>{value.name}</span>
 							<CancelIcon
 								className={`${styles.deleteIcon} ml-2`}
 								onClick={() => {
 									onChange(undefined);
 								}}
 							/>
-						</p>
+						</div>
 					) : (
 						<p>
 							<u className="text-primary mr-2">Upload a file</u>
-							<span className="hidden sm:inline">or drag and drop here</span>
+							<span className={`${styles.inputPlaceholderSecondary} hidden sm:inline`}>
+								or drag and drop here
+							</span>
 						</p>
 					)}
 				</div>
